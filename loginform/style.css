@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins',sans-serif
+    font-family:'Poppins',sans-serif;
+    
 }
 
 .container{
@@ -24,15 +25,49 @@
     padding: 30px;
 
 }
-header{
-    font-size: 27px;
+
+.button-box{
+    position: relative;
+    width: 210px;
+    margin: 35px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    margin-top: -6px;
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: rgb(27, 26, 26);
     font-weight: 600;
-    color: #002244;
-    text-align: center;
+}
+
+#login-head{
+    color:white;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-color:#ba4513ac;
+    border-radius: 20px;
+    transition: .6s ease-in-out;
 }
 
 form{
     margin-top: 30px;
+}
+
+
+#sign{
+    display: none;
 }
 
 .form .field{

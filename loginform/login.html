@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Sign up</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <section class="container forms">
         <div class="form login">
             <div class="form content">
-                <header>Login</header>
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()" id="login-head">Login</button>
+                <button type="button" class="toggle-btn" onclick="signin()" id="sign-head">Sign</button>
+                </div>
 
-                <form action="#">
+                <form action="#" id="login">
                     <div class="field input-field">
                         <input type="email" placeholder="Enter mail" class="input">
                     </div>
@@ -29,10 +34,26 @@
                         <button>Login</button>
                     </div>
 
-                    <div class="form-link">
-                        <span>Dont have an account?&nbsp;<a href="signup.html" class="forgot-pass">Signup</a>
-                        </span>
+                </form>
+
+                <form action="#" id="sign">
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Enter Username" class="input">
                     </div>
+
+                    <div class="field input-field">
+                        <input type="email" placeholder="Enter Email" class="input">
+                    </div>
+                    <div class="field input-field">
+                        <input type="password" placeholder="Enter password" class="input">
+                        <i class='bx bx-hide eye-icon'></i>                    </div>
+
+
+                    <div class="field button-field">
+                        <button>Sign up</button>
+                    </div>
+
                 </form>
                 <div class="line"></div>
 
@@ -45,5 +66,32 @@
             </div>
         </div>
     </section>
+
+    <script>
+        var x=document.getElementById("login");
+        var y=document.getElementById("sign");
+        var z=document.getElementById("btn");
+        var login_head=document.getElementById("login-head")
+        var sign_head=document.getElementById("sign-head")
+
+
+        function signin(){
+            z.style.left="110px";
+            y.style.display="block";
+            x.style.display="none";
+            sign_head.style.color="white"
+            login_head.style.color="black"
+            y.style.transition=".6s ease-in-out"
+        }
+
+        function login(){
+            z.style.left="0";
+            x.style.transition=".6s ease-in-out"
+            y.style.display="none";
+            sign_head.style.color="black"
+            login_head.style.color="white"
+            x.style.display="block";
+        }
+    </script>
 </body>
 </html>
